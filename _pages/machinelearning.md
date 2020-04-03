@@ -1,7 +1,7 @@
 ---
 layout: posts
-permalink: /Stats/
-title: "Statistical projects"
+permalink: /data-wrangling/
+title: "Deep's Project"
 author_profile: true
 header:
   image: "/images/IMG_1073.JPG"
