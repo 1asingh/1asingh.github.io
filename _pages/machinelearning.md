@@ -1,10 +1,10 @@
 ---
 layout: posts
-permalink: /data-wrangling/
-title: "Data Wrangling projects"
+permalink: /Stats/
+title: "Statistical projects"
 author_profile: true
 header:
-  image: "/images/fort point.png"
+  image: "/images/IMG_1073.JPG"
 ---
 
 
