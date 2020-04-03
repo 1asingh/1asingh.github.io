@@ -2,8 +2,10 @@
 main:
   - title: "About"
     url: /about/
-  - title: "Data Wrangling Projects"
+  - title: "Deep's project"
     url: /data-wrangling/
+  - title: "Deep's tutorials"
+    url: /deep-tutorial/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
