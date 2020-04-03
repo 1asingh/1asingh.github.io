@@ -1,26 +1,22 @@
 ---
-title: "Data Wrangling Project"
+title: "Github post tutorial"
 date: 2018-01-28
-tags: [data wrangling, data science, messy data]
+tags: [git pages, messy page]
 header:
   image: "/images/perceptron/percept.jpg"
 excerpt: "Data Wrangling, Data Science, Messy Data"
 mathjax: "true"
 ---
 
-# H1 Heading
-
-## H2 Heading
-
-### H3 Heading
+# H1 Heading is made with only one '#'
+## H2 Heading is made with only one '##'
+### H3 Heading is made with only one '###'
 
 Here's some basic text.
+And here's some *italics* text which uses '*--text--*'
+Here's some **bold** text. which uses '**--text--**'
 
-And here's some *italics*
-
-Here's some **bold** text.
-
-What about a [link](https://github.com/dataoptimal)?
+What about a [link](https://github.com/dataoptimal)? -- it uses [text](url)
 
 Here's a bulleted list:
 * First item
