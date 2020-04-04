@@ -69,7 +69,7 @@ Output:
    1. Take 10,000 bootstrap replicates of the mean:  `bs_replicates = draw_bs_reps(data,np.mean,10000)`.
    2. Bootstrap confidence interval: `conf_int = np.percentile(bs_replicates, [2.5, 97.5])`.
    
-<img src="{{ site.url }}{{ site.baseurl }}/images/bootstrap.png"  height="40"  alt="Histogram showing bootstrap replicates in 95 confidence interval">
+<img src="{{ site.url }}{{ site.baseurl }}/images/bootstrap.png"  height="10"  alt="Histogram showing bootstrap replicates in 95 confidence interval">
 
 ### Pairs bootstrap:
 * For Linear regression:
@@ -99,7 +99,7 @@ Output:
     return bs_slope_reps, bs_intercept_reps
 ```
 Output:
-<img src="{{ site.url }}{{ site.baseurl }}/images/pairbootstrap.svg" alt="ecdf plot of pair bootsrap for linear regression">
+<img src="{{ site.url }}{{ site.baseurl }}/images/pairbootstrap.svg" height="10" alt="ecdf plot of pair bootsrap for linear regression">
 
 ## Bootstrap hypothesis testing
    * Hypothesis testing: Assessment of how reasonable the observed data are assuming a hypothesis is true
