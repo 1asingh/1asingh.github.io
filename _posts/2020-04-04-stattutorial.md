@@ -42,7 +42,7 @@ Output:
 
 ## Bootstrap confidence interval
 * In statistical inference, you want to know what would happen if you could repeat your data acquisition an infinite number of times. The technique to do it is aptly called bootstrapping.
-Python code block for Bootstrapping:
+* Python code block for Bootstrapping:
 ```python
       def bootstrap_replicate_1d(data, func):
         """Generate bootstrap replicate of 1D data."""
@@ -66,10 +66,10 @@ Python code block for Bootstrapping:
 
 + Confidence interval of a statistic: If we repeated measurements over and over again, $$p%$$ of the observed values would lie within the $$p%$$ confidence interval.
 - Example:
-   1. Take 10,000 bootstrap replicates of the mean:  `bs_replicates = draw_bs_reps(rainfall,np.mean,10000)`.
+   1. Take 10,000 bootstrap replicates of the mean:  `bs_replicates = draw_bs_reps(data,np.mean,10000)`.
    2. Bootstrap confidence interval: `conf_int = np.percentile(bs_replicates, [2.5, 97.5])`.
    
-<img src="{{ site.url }}{{ site.baseurl }}/images/bootstrap.png" alt="Histogram showing bootstrap replicates in 95 confidence interval">
+<img src="{{ site.url }}{{ site.baseurl }}/images/bootstrap.png"  height="40"  alt="Histogram showing bootstrap replicates in 95 confidence interval">
 
 ### Pairs bootstrap:
 * For Linear regression:
