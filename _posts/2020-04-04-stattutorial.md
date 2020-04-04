@@ -1,5 +1,5 @@
 ---
-title: "stat tutorial"
+title: "Statistical Tools"
 date: 2020-04-04
 tags: [stat, python]
 header:
