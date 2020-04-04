@@ -3,7 +3,7 @@ title: "stat tutorial"
 date: 2020-04-04
 tags: [stat, python]
 header:
-  image: "/images/perceptron/percept.jpg"
+  image: "/images/statheader.png"
 excerpt: "Data Science"
 mathjax: "true"
 ---
@@ -19,3 +19,8 @@ Python code block for ECDF:
       y = np.arange(1, len(x)+1) / len(x)
       return x,y
 ```
+Computing percentiles `np.percentile(df['col_name'], [25, 50, 75])`.
+
+Output:
+<img src="{{ site.url }}{{ site.baseurl }}/images/ecdf.png" alt="ecdf plot with percentiles">
+
