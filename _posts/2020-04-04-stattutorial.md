@@ -21,7 +21,6 @@ Python code block for ECDF:
 ```
 Computing percentiles `np.percentile(df['col_name'], [25, 50, 75])`.
 
-Output:
 <img src="{{ site.url }}{{ site.baseurl }}/images/ecdf.png" alt="ecdf plot with percentiles">
 
 ## Poisson Process
@@ -45,15 +44,14 @@ Output:
 * In statistical inference, you want to know what would happen if you could repeat your data acquisition an infinite number of times. The technique to do it is aptly called bootstrapping.
 Python code block for Bootstrapping:
 ```python
-    import numpy as np
-
-    def bootstrap_replicate_1d(data, func):
+      def bootstrap_replicate_1d(data, func):
         """Generate bootstrap replicate of 1D data."""
         # Bootstrap sample(bs_sample ): a resampled array of the data
         bs_sample = np.random.choice(data, len(data)) 
         # Bootstrap sample(func(bs_sample) ): statistic computed from a resampled array
         return func(bs_sample)
-    
+```
+```python  
     def draw_bs_reps(data, func, size=1):
         """ This function Generates many bootstrap replicates """
 
@@ -63,16 +61,14 @@ Python code block for Bootstrapping:
         # Generate replicates:Draw bootstrap replicates.
         for i in range(size):
             bs_replicates[i] = bootstrap_replicate_1d(data, func)
-        return bs_replicates
-    
+        return bs_replicates  
 ```
-* Confidence interval of a statistic: If we repeated measurements over and over again, $$p%$$ of the observed values would lie within the $$p%$$ confidence interval.
-* Example:
+
++ Confidence interval of a statistic: If we repeated measurements over and over again, $$p%$$ of the observed values would lie within the $$p%$$ confidence interval.
+- Example:
    1. Take 10,000 bootstrap replicates of the mean:  `bs_replicates = draw_bs_reps(rainfall,np.mean,10000)`.
-   2. Bootstrap confidence interval: `conf_int = np.percentile(bs_replicates, [2.5, 97.5])`
+   2. Bootstrap confidence interval: `conf_int = np.percentile(bs_replicates, [2.5, 97.5])`.
    
- 
-Output:
 <img src="{{ site.url }}{{ site.baseurl }}/images/bootstrap.png" alt="Histogram showing bootstrap replicates in 95 confidence interval">
 
 ### Pairs bootstrap:
