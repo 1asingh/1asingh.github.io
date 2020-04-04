@@ -101,9 +101,56 @@ Output:
 Output:
 <img src="{{ site.url }}{{ site.baseurl }}/images/pairbootstrap.svg" height="10" alt="ecdf plot of pair bootsrap for linear regression">
 
-## Bootstrap hypothesis testing
+## hypothesis testing
    * Hypothesis testing: Assessment of how reasonable the observed data are assuming a hypothesis is true
    * Null hypothesis: name for the hypothesis you are testing
-   *
+   * permutation replicates:  a single value of a statistic computed from a permutation sample.
+   
+```python
+   def permutation_sample(data1, data2):
+       """Generate a permutation sample from two data sets."""
 
+       # Concatenate the data sets: data
+       data = np.concatenate((data1,data2))
 
+       # Permute the concatenated array: permuted_data
+       permuted_data = np.random.permutation(data)
+
+       # Split the permuted array into two: perm_sample_1, perm_sample_2
+       perm_sample_1 = permuted_data[:len(data1)]
+       perm_sample_2 = permuted_data[len(data1):]
+       
+       return perm_sample_1, perm_sample_2
+```
+```python
+   def draw_perm_reps(data_1, data_2, func, size=1):
+       """Generate multiple permutation replicates."""
+
+       # Initialize array of replicates: perm_replicates
+       perm_replicates = np.empty(size)
+
+       for i in range(size):
+           # Generate permutation sample
+           perm_sample_1, perm_sample_2 = permutation_sample(data_1, data_2)
+
+           # Compute the test statistic
+           perm_replicates[i] = func( perm_sample_1, perm_sample_2)
+       return perm_replicates
+```
+   * p-value: The probability of obtaining a value of your test statistic that is at least as extreme as what was observed, under the assumption the null hypothesis is true.
+   * Statistical significance is determined by the smallness if a p-value
+### Bootstrap hypothesis testing pipeline
+    1. Clearly state the null hypothesis 
+    2. Define your test statistic
+    3. Generate many sets of simulated data assuming the null hypothesis is true
+    4. Compute the test statistic for each simulated data set
+    5. The p-value is the fraction of your simulated data sets for which the test statistic is at least as extreme as for the real data
+    
+    
+    
+    
+    
+    
+    
+    
+    
